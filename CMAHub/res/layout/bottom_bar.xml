@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="前端设备"
                 android:textColor="@color/actionbar_defaultTitleTextColor"
-                android:textSize="12sp" />
+                android:textSize="12dip" />
         </LinearLayout>
         
         <LinearLayout

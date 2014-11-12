@@ -38,7 +38,7 @@
         	android:layout_width="match_parent"
         	android:layout_height="50dip"
         	android:layout_weight="1"
-        	android:text="设备相信信息"
+        	android:text="设备详细信息"
         	android:textSize="20sp"
         	android:gravity="center"
         	/>

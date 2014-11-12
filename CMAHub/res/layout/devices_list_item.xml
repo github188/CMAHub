@@ -43,14 +43,14 @@
             		android:layout_height="wrap_content"
                     android:text="设备名称："
                     android:textColor="#000000"
-                	android:textSize="12sp" />
+                	android:textSize="12dip" />
                 <TextView
                     android:id="@+id/device_name_value"
                     android:layout_width="wrap_content"
             		android:layout_height="wrap_content"
                     android:text="未知设备名称"
                     android:textColor="#000000"
-                	android:textSize="12sp"
+                	android:textSize="12dip"
                     />
             </LinearLayout>
             <LinearLayout
@@ -63,14 +63,14 @@
             		android:layout_height="wrap_content"
                     android:text="监测类型："
                     android:textColor="#000000"
-                	android:textSize="12sp" />
+                	android:textSize="12dip" />
                 <TextView
                     android:id="@+id/device_type_value"
                     android:layout_width="wrap_content"
             		android:layout_height="wrap_content"
                     android:text="未知监测类型"
                     android:textColor="#000000"
-                	android:textSize="12sp"
+                	android:textSize="12dip"
                     />
             </LinearLayout>
             
@@ -84,7 +84,7 @@
             		android:layout_height="wrap_content"
                     android:text="设备ID："
                     android:textColor="#000000"
-                	android:textSize="12sp" />
+                	android:textSize="12dip" />
                 <TextView
                     android:layout_width="wrap_content"
             		android:layout_height="wrap_content"
