@@ -95,7 +95,7 @@ public class DeviceListView extends ListView {
 		return super.dispatchTouchEvent(event);
 	}
 	
-	public boolean onIterceptTouchEvent(MotionEvent ev) {
+	public boolean onInterceptTouchEvent(MotionEvent ev) {
 //		switch (ev.getAction()) {
 //		case MotionEvent.ACTION_MOVE: {
 //			if (itemView.findViewById(R.id.tv_coasting).getVisibility() == View.VISIBLE){

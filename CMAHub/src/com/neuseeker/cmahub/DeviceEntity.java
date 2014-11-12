@@ -1,6 +1,7 @@
 package com.neuseeker.cmahub;
 
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.UUID;
 
 public class DeviceEntity {
@@ -22,6 +23,7 @@ public class DeviceEntity {
     private String mDescription;
     private Timestamp mLastupload;
     private DATA_TYPE mDataType;
+    private HashMap<String, String> mData;
     
     public DeviceEntity(String deviceName, String deviceID, String linkedDeviceID,
     		String description, Timestamp lastupload, DATA_TYPE type) {
@@ -112,5 +114,9 @@ public class DeviceEntity {
     
     public UUID getId() {
     	return mId;
+    }
+    
+    public HashMap<String, String> getData() {
+    	return mData;
     }
 }

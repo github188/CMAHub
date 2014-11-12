@@ -43,7 +43,10 @@ public class DeviceManager {
 			}
 		}
 		
-		return null;
+		//FIXME:
+		//Test purpose only.
+		return mDevices.get(0);
+		//return null;
 	}
 	
 }
