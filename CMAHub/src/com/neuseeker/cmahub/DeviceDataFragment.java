@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.UUID;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -124,6 +125,7 @@ public class DeviceDataFragment extends Fragment {
 				
 		while (iter.hasNext()) {
 			HashMap.Entry entry = (HashMap.Entry)iter.next();
+			
 			LinearLayout subLayout = new LinearLayout(getActivity());
 			LinearLayout.LayoutParams subParam = new LinearLayout.LayoutParams(
 					LinearLayout.LayoutParams.MATCH_PARENT,
@@ -132,20 +134,29 @@ public class DeviceDataFragment extends Fragment {
 					
 			TextView tKey = new TextView(getActivity());
 			TextView tValue = new TextView(getActivity());
-
-					
+			TextView tIndent = new TextView(getActivity());
+			
+			tIndent.setText(" = ");
+			tIndent.setTextSize(18);
+			tIndent.setTextColor(Color.rgb(0,  255,  0));
+			
 			tKey.setText((String)entry.getKey());
 			tValue.setText((String)entry.getValue());
 					
-			tKey.setTextSize(15);
-			tKey.setTextColor(Color.rgb(0, 0, 0));
+			tKey.setTextSize(18);
+			tKey.setTextColor(Color.rgb(0, 255, 0));
 			
-			tValue.setTextSize(15);
-			tValue.setTextColor(Color.rgb(0, 0, 0));
+			tKey.setTypeface(Typeface.create((String)null, Typeface.BOLD_ITALIC));
+			
+			tValue.setTextSize(18);
+			tValue.setTextColor(Color.rgb(238, 238, 0));
+			
 			
 			
 			subLayout.addView(tKey);
+			subLayout.addView(tIndent);
 			subLayout.addView(tValue);
+			
 					
 			((LinearLayout)layout).addView(subLayout);
 					

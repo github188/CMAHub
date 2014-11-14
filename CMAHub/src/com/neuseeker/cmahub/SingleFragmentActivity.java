@@ -13,14 +13,15 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		FragmentManager manager = getSupportFragmentManager();
-		Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
-		
-		if (fragment == null) {
-			fragment = createFragment();
-			manager.beginTransaction()
-				.add(R.id.fragmentContainer, fragment)
-				.commit();
-		}
+//		
+//		FragmentManager manager = getSupportFragmentManager();
+//		Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
+//		
+//		if (fragment == null) {
+//			fragment = createFragment();
+//			manager.beginTransaction()
+//				.add(R.id.fragmentContainer, fragment)
+//				.commit();
+//		}
 	}
 }

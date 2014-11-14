@@ -3,24 +3,45 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:orientation="vertical"
     >
 
+    <LinearLayout
+        android:id="@+id/device_data_functional_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        >
+        
 	<Button
+	    android:id="@+id/btn_query_history_data"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="查询全部历史数据"
+	    android:text="查询历史数据"
 	    android:textColor="#000000"
 	    android:textSize="22sp"
 	    android:textStyle="bold"
+	    android:layout_weight="1"
 	    />
-
+	
+	<Button
+		android:id="@+id/btn_export_data"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="导出数据"
+		android:textColor="#000000"
+		android:textSize="22sp"
+		android:textStyle="bold"
+		android:layout_weight="1"
+		/>
+	
+	</LinearLayout>
+	
 	<LinearLayout
 	    android:id="@+id/data_zone"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:background="#FFFFFF"
 	    android:orientation="vertical"
 	    >
 	    

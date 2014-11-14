@@ -2,11 +2,15 @@ package com.neuseeker.cmahub;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.UUID;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -15,16 +19,40 @@ import android.widget.TextView;
 import android.widget.ImageView;
 
 public class DeviceListFragment extends ListFragment {
+	public static final String EXTRA_CMA_ID = "cmahubintent.CMA_ID";
 	private static final String TAG = "DeviceListFragment";
 	
 	private ArrayList<DeviceEntity> mDevices;
+
+	
+	public static DeviceListFragment newInstance(UUID id) {
+		//TODO:
+		Bundle args = new Bundle();
+		
+		DeviceListFragment fragment = new DeviceListFragment();
+		fragment.setArguments(args);
+		
+		return fragment;
+	}
+	
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		mDevices = DeviceManager.get(getActivity()).getDevices();
 		DeviceListAdapter adapter = new DeviceListAdapter(mDevices);
 		setListAdapter(adapter);
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater,
+			ViewGroup parent,
+			Bundle savedInstanceState) {
+		return super.onCreateView(inflater, parent, savedInstanceState);
+		//View v = inflater.inflate(R.layout.fragment_device_list, parent, false);
+		
+		//return v;
 	}
 	
 	@Override

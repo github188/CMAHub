@@ -9,12 +9,33 @@ import android.view.MenuItem;
 import android.support.v4.app.Fragment;
 
 
-public class MainActivity extends SingleFragmentActivity {
+//public class MainActivity extends SingleFragmentActivity {
+//	@Override
+//	protected Fragment createFragment() {
+//		return new DeviceListFragment();
+//	}
+//}
+
+public class MainActivity extends MultipleFragmentActivity {
 	@Override
-	protected Fragment createFragment() {
-		return new DeviceListFragment();
+	protected Fragment createFragment(int id) {
+		switch (id) {
+		case 0:
+			return new DeviceListFragment();
+		case 1:
+			return new DataManageFragment();
+		case 2:
+			return new ServiceManageFragment();
+		case 3:
+			return new SettingFragment();
+		default:
+			return new DeviceListFragment();
+				
+		}
+		
 	}
 }
+
 //public class MainActivity extends Activity {
 //
 //    @Override
