@@ -40,6 +40,7 @@ public class DataManageFragment extends Fragment {
 		
 	}
 	
+	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		
@@ -61,7 +62,7 @@ public class DataManageFragment extends Fragment {
 			Bundle savedInstanceState) {
 		
 		View v = inflater.inflate(R.layout.fragment_data_manage, parent, false);
-		
+
 		return v;
 	}
 	

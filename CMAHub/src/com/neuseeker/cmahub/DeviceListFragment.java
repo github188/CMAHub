@@ -45,14 +45,14 @@ public class DeviceListFragment extends ListFragment {
 		setListAdapter(adapter);
 	}
 	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			ViewGroup parent,
 			Bundle savedInstanceState) {
-		return super.onCreateView(inflater, parent, savedInstanceState);
-		//View v = inflater.inflate(R.layout.fragment_device_list, parent, false);
+		View v = super.onCreateView(inflater, parent, savedInstanceState);
 		
-		//return v;
+		return v;
 	}
 	
 	@Override

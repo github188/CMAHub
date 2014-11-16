@@ -7,14 +7,14 @@
     <include
         android:id="@+id/title"
         layout="@layout/main_title" />
-
-    
+	
      <android.support.v4.view.ViewPager
         android:id="@+id/main_page_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottomtab"
-        android:layout_below="@id/title">
+        android:layout_below="@id/title"
+        >
         <FrameLayout
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
@@ -31,9 +31,9 @@
         android:layout_height="match_parent"
         />
     -->
-    
+  
 	<include 
 	    android:id="@+id/bottomtab"
 	    layout="@layout/bottom_bar" />
-
+	
 </RelativeLayout>

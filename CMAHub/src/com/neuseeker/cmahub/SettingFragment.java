@@ -38,9 +38,7 @@ public class SettingFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 	}
-	
 
-	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		//TODO:
@@ -53,6 +51,7 @@ public class SettingFragment extends Fragment {
 			Bundle savedInstanceState) {
 		
 		View v = inflater.inflate(R.layout.fragment_setting, parent, false);
+
 		return v;
 	}
 }

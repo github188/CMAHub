@@ -25,16 +25,18 @@
                 android:id="@+id/img_bottomtab_devices"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="matrix"
                 android:clickable="true"
-                android:src="@drawable/bottomtab_devices_pressed" />
+                android:scaleType="matrix"
+                android:src="@drawable/bottomtab_devices_pressed"
+                />
+                <!--  android:src="@drawable/bottomtab_devices_pressed" />-->
             
             <TextView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="前端设备"
                 android:textColor="@color/actionbar_defaultTitleTextColor"
-                android:textSize="12dip" />
+                android:textSize="12sp" />
         </LinearLayout>
         
         <LinearLayout
@@ -50,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
-                android:src="@drawable/bottomtab_data_normal" />
+                />
+                <!--  android:src="@drawable/bottomtab_data_normal" />-->
             	
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +76,8 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
-                android:src="@drawable/bottomtab_services_normal" />
+                />
+                <!-- android:src="@drawable/bottomtab_services_normal" />-->
             	
             <TextView
                 android:layout_width="wrap_content"
@@ -96,7 +100,8 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
-                android:src="@drawable/bottomtab_settings_normal" />
+                />
+                <!--android:src="@drawable/bottomtab_settings_normal" />-->
             	
             <TextView
                 android:layout_width="wrap_content"
