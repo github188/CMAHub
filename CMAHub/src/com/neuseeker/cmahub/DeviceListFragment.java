@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ImageView;
 
+
 public class DeviceListFragment extends ListFragment {
 	public static final String EXTRA_CMA_ID = "cmahubintent.CMA_ID";
 	private static final String TAG = "DeviceListFragment";
@@ -41,8 +42,13 @@ public class DeviceListFragment extends ListFragment {
 		super.onCreate(savedInstanceState);
 		
 		mDevices = DeviceManager.get(getActivity()).getDevices();
-		DeviceListAdapter adapter = new DeviceListAdapter(mDevices);
-		setListAdapter(adapter);
+		
+		if (null != mDevices) {
+			DeviceListAdapter adapter = new DeviceListAdapter(mDevices);
+			setListAdapter(adapter);
+		}
+		//DeviceListAdapter adapter = new DeviceListAdapter(mDevices);
+		//setListAdapter(adapter);
 	}
 	
 
@@ -51,9 +57,10 @@ public class DeviceListFragment extends ListFragment {
 			ViewGroup parent,
 			Bundle savedInstanceState) {
 		View v = super.onCreateView(inflater, parent, savedInstanceState);
-		
+
 		return v;
 	}
+	
 	
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
@@ -74,6 +81,7 @@ public class DeviceListFragment extends ListFragment {
 		
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
+			
 			if (null == convertView) {
 				convertView = getActivity().getLayoutInflater().
 						inflate(R.layout.devices_list_item, null);

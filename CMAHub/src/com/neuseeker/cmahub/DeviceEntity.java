@@ -4,7 +4,10 @@ import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.UUID;
 
+import android.util.Log;
+
 public class DeviceEntity {
+	public static final String TAG = "DeviceEntity";
 	
 	private UUID mId;
 	public enum DATA_TYPE {
@@ -17,6 +20,7 @@ public class DeviceEntity {
 		ETYPE_UNKNOWN
 				
 	};
+	private String mObjId;
     private String mDeviceName;
     private String mDeviceID;
     private String mLinkedDeviceID;
@@ -25,8 +29,11 @@ public class DeviceEntity {
     private DATA_TYPE mDataType;
     private HashMap<String, String> mData;
     
-    public DeviceEntity(String deviceName, String deviceID, String linkedDeviceID,
+    public DeviceEntity(String objid, String deviceName, String deviceID, String linkedDeviceID,
     		String description, Timestamp lastupload, DATA_TYPE type) {
+    	
+    	
+    	mObjId = objid;
     	mDeviceName = deviceName;
     	mDeviceID = deviceID;
     	mLinkedDeviceID = linkedDeviceID;
@@ -34,6 +41,9 @@ public class DeviceEntity {
     	mLastupload = lastupload;
     	mDataType = type;
     	mId = UUID.randomUUID();
+    	
+    	Log.d(TAG, "Construct:+"+ mObjId + mDeviceName + mDeviceID + mLinkedDeviceID
+    	+ mDescription + mLastupload.toString());
     }
     
     private void setDataType(DATA_TYPE type) {
@@ -118,5 +128,23 @@ public class DeviceEntity {
     
     public HashMap<String, String> getData() {
     	return mData;
+    }
+    
+    public static DATA_TYPE getTypeFromString(String str) {
+    	DATA_TYPE ret = DATA_TYPE.ETYPE_UNKNOWN;
+    	if (str.equals("SD_FBJC")) {
+    		ret = DATA_TYPE.ETYPE_FBJC;
+    	} else if (str.equals("SD_QX")) {
+    	    ret = DATA_TYPE.ETYPE_QX;
+    	} else if (str.equals("SD_DXWD")) {
+    	    ret = DATA_TYPE.ETYPE_DXWD;
+    	} else if (str.equals("SD_IMAGE")) {
+    	    ret = DATA_TYPE.ETYPE_IMAGE;
+    	} else if (str.equals("SD_VIDEO")) {
+    	    ret = DATA_TYPE.ETYPE_VIDEO;
+    	} else if (str.equals("SD_JYZWH")) {
+    		ret = DATA_TYPE.ETYPE_WH;
+    	}
+    	return ret;
     }
 }
