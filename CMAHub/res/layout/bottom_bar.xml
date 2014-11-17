@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
+                android:src="@drawable/bottomtab_data_normal"
                 />
                 <!--  android:src="@drawable/bottomtab_data_normal" />-->
             	
@@ -76,6 +77,7 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
+                android:src="@drawable/bottomtab_services_normal"
                 />
                 <!-- android:src="@drawable/bottomtab_services_normal" />-->
             	
@@ -100,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:scaleType="matrix"
                 android:clickable="true"
+                android:src="@drawable/bottomtab_settings_normal"
                 />
                 <!--android:src="@drawable/bottomtab_settings_normal" />-->
             	
